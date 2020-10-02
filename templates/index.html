@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diabetes Prediction</title>
+
+    <style>
+        body,html{height:100%;
+                  margin:0;}
+        .bg{background-image:url("https://cdn.nohat.cc/thumb/f/720/d9e4fa3d2d564e6eaa00.jpg");
+             height:100%;
+             width:100%;
+             background-position: center;
+             background-repeat: no-repeat;
+             background-size:cover;}
+
+    </style>
+</head>
+<body>
+<div class="bg">
+
+<table bgcolor="#1E90FF" border="1">
+<div style="text-align:center;color:black;font-size:30px;font-weight:bold"> Diabetes Prediction using Machine Learning </div>
+
+   </table>
+<h2 style="font=size:8px;color:black"> Please fill the following details to know whether you are diabetic or not..</h2>
+
+<form method="POST" action="/">
+   <br/>
+    <table border="0"  style="margin-left:30px">
+        <tr style="width:900px"><td style="font-size:20px;font-weight:bold;">Number of Pregnancies:</td>
+            <td>&nbsp;&nbsp;</td>
+        <td><input type="number" step="any" name="NumPregnancies"/></td></tr>
+        <tr style="width:900px"><td style="font-size:20px;font-weight:bold">Glucose:</td>
+            <td>&nbsp;&nbsp;</td>
+        <td><input type="number" step="any" name="glc"/> </td></tr>
+        <tr style="width:900px"><td style="font-size:20px;font-weight:bold">Blood Pressure:</td>
+            <td>&nbsp;&nbsp;</td>
+        <td><input type="number" step="any" name="bp"/></td></tr>
+        <tr style="width:900px"><td style="font-size:20px;font-weight:bold">Skin Thickness:</td>
+            <td>&nbsp;&nbsp;</td>
+        <td><input type="number" step="any" name="skth"/></td></tr>
+        <tr  style="width:900px"><td style="font-size:20px;font-weight:bold">Insulin:</td>
+            <td>&nbsp;&nbsp;</td>
+        <td><input type="number" step="any" name="ins"/></td></tr>
+        <tr  style="width:900px"><td style="font-size:20px;font-weight:bold">BMI:</td>
+            <td>&nbsp;&nbsp;</td>
+        <td><input type="number" step="any" name="bm"/></td></tr>
+        <tr  style="width:900px"><td style="font-size:20px;font-weight:bold">Diabetes Pedigree Function:</td>
+            <td>&nbsp;&nbsp;</td>
+        <td><input type="number" step="any" name="dp"/></td></tr>
+        <tr  style="width:900px"><td style="font-size:20px;font-weight:bold">Age:</td>
+            <td>&nbsp;&nbsp;</td>
+        <td><input type="number" step="any" name="ag"/></td></tr>
+    </table>
+    <br/><br/>
+    <input style="background-color:green;color:white;height:25px;width:125px;margin-left:75px" type="submit" name="submit">
+
+</form>
+
+{% if prediction==1 %}
+    <h1 style="color:darkgreen"><i> You are not diabetic.</i></h1>
+{% endif %}
+
+{% if prediction==0 %}
+    <h1 ><i> You are diabetic.Please consult a doctor!</i></h1>
+{% endif %}
+
+</div>
+</body>
+</html>
+
