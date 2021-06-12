@@ -1,4 +1,4 @@
-# Diabetes_Classification
+# Diabetes_prediction
 In this problem you are given a Diabetes Data set consisting of following features -
 
 ['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age', 'Outcome']
